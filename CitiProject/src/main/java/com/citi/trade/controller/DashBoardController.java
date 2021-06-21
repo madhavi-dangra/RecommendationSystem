@@ -1,19 +1,17 @@
 package com.citi.trade.controller;
 
-import java.io.IOException;
-
-import java.util.List;
-
+import com.citi.trade.model.StockDetails;
+import com.citi.trade.service.DashBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.citi.trade.model.StockDetails;
-import com.citi.trade.service.DashBoardService;
-
 import yahoofinance.histquotes.HistoricalQuote;
+
+import java.io.IOException;
+import java.util.List;
 
 
 
@@ -24,7 +22,7 @@ public class DashBoardController {
 	
 	
 	@Autowired
-	private DashBoardService dashboardService;
+	public DashBoardService dashboardService;
 	
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@GetMapping("/getPriceShokers")

@@ -8,9 +8,9 @@ import java.util.Map;
 
 public class SectorCompanyList {
 	
-	public Map<String,List<String>> sectorWiseCompany()
+	public static Map<String,List<String>> sectorWiseCompany()
 	{
-	Map<String, List<String>> sectorCompanyList = Map.ofEntries(
+	return Map.ofEntries(
 			new AbstractMap.SimpleEntry<String, List<String>>("Automobile",
 					new ArrayList<>(Arrays.asList("BAJAJ-AUTO.NS", "EICHERMOT.NS", "HEROMOTOCO.NS", "M&M.NS",
 							"MARUTI.NS", "TATAMOTORS.NS"))),
@@ -25,10 +25,7 @@ public class SectorCompanyList {
 							"POWERGRID.NS"))),
 			new AbstractMap.SimpleEntry<String, List<String>>("Information Technology",
 					new ArrayList<>(Arrays.asList("HCLTECH.NS", "INFY.NS", "TCS.NS", "TECHM.NS", "WIPRO.NS","TATAELXSI.NS"))));
-	
-	return sectorCompanyList;
-	
-	
+
 	}
 
 

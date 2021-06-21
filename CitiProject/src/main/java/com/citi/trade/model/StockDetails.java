@@ -19,14 +19,14 @@ public class StockDetails {
 	private BigDecimal open;
 	private BigDecimal percentageChange;
 	private BigDecimal bidPrice;
-	private BigDecimal MovingAverage;
+	private BigDecimal movingAverage;
 	
 	
 	public BigDecimal getMovingAverage() {
-		return MovingAverage;
+		return movingAverage;
 	}
 	public void setMovingAverage(BigDecimal movingAverage) {
-		MovingAverage = movingAverage;
+		this.movingAverage = movingAverage;
 	}
 	public Long getVolume() {
 		return volume;
@@ -52,15 +52,10 @@ public class StockDetails {
 	public void setGrowth(BigDecimal growth) {
 		this.growth = growth;
 	}
-	public String getCompanyName() {
-		return companyName;
-	}
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-	public String getSector() {
-		return sector;
-	}
+
 	public void setSector(String sector) {
 		this.sector = sector;
 	}
@@ -82,14 +77,8 @@ public class StockDetails {
 	public void setLow(BigDecimal low) {
 		this.low = low;
 	}
-	public BigDecimal getClose() {
-		return close;
-	}
 	public void setClose(BigDecimal close) {
 		this.close = close;
-	}
-	public BigDecimal getOpen() {
-		return open;
 	}
 	public void setOpen(BigDecimal open) {
 		this.open = open;
@@ -99,9 +88,6 @@ public class StockDetails {
 	}
 	public void setPercentageChange(BigDecimal percentageChange) {
 		this.percentageChange = percentageChange;
-	}
-	public BigDecimal getBidPrice() {
-		return bidPrice;
 	}
 	public void setBidPrice(BigDecimal bidPrice) {
 		this.bidPrice = bidPrice;
