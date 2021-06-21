@@ -13,19 +13,19 @@ import java.util.List;
 @Component
 public class UserHistoryController {
 
-	@Autowired
-	public UserHistoryService userHistoryService;
-	
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
-	@GetMapping("/getHistory")
-	public List<UserHistory> getHistory(@RequestParam("userName") String userName) {
-		return userHistoryService.getSavedStocks(userName);
-	}
+    @Autowired
+    public UserHistoryService userHistoryService;
 
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
-	@PostMapping("/saveHistory")
-	public boolean saveHistory(@RequestBody UserHistory history) {
-		return userHistoryService.saveUserHistory(history);
-	}
-	
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/getHistory")
+    public List<UserHistory> getHistory(@RequestParam("userName") String userName) {
+        return userHistoryService.getSavedStocks(userName);
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PostMapping("/saveHistory")
+    public boolean saveHistory(@RequestBody UserHistory history) {
+        return userHistoryService.saveUserHistory(history);
+    }
+
 }

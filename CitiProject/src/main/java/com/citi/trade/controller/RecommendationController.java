@@ -13,14 +13,14 @@ import java.util.List;
 @Component
 public class RecommendationController {
 
-	@Autowired
-	public RecommendationService recommendationService;
-	
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
-	@GetMapping("/getRecommendation")
-	public List<StockDetails> getRecommendation(@RequestParam("sector") String sector, @RequestParam("parameter") String parameter) {
-		return recommendationService.getRecommendation(sector, parameter);
-	}
-	
-	
+    @Autowired
+    public RecommendationService recommendationService;
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/getRecommendation")
+    public List<StockDetails> getRecommendation(@RequestParam("sector") String sector, @RequestParam("parameter") String parameter) {
+        return recommendationService.getRecommendation(sector, parameter);
+    }
+
+
 }
