@@ -110,7 +110,7 @@ public class DashBoardService {
 		return volumeShockers;
 
 	}	
-	public List<HistoricalQuote> getTopGainer() throws IOException
+	public List<HistoricalQuote> getTopGainer()
 	{
 		List<StockDetails> topGainer = new ArrayList<>();
 		Set<String> sectorList = sectorWiseCompanies.keySet();
@@ -153,8 +153,16 @@ public class DashBoardService {
 					return 0;
 			});}
 		String topGainerCompanySymbol = topGainer.get(0).getSymbol();
-		Stock topGainerCompanyName = YahooFinance.get(topGainerCompanySymbol);
-		return topGainerCompanyName.getHistory(from,to, Interval.DAILY);
+
+		List<HistoricalQuote> historyOfTopGainer = new ArrayList<>();
+		try {
+			Stock topGainerCompanyName = YahooFinance.get(topGainerCompanySymbol);
+			topGainerCompanyName.getHistory(from,to, Interval.DAILY);
+		}
+		catch (IOException e) {
+
+		}
+		return historyOfTopGainer;
     }
 	
 }

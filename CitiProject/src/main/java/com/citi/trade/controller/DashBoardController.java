@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import yahoofinance.histquotes.HistoricalQuote;
 
-import java.io.IOException;
 import java.util.List;
 
 
@@ -26,19 +25,19 @@ public class DashBoardController {
 	
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@GetMapping("/getPriceShokers")
-	public List<StockDetails> getPriceShokers() throws IOException {
+	public List<StockDetails> getPriceShokers(){
 		
 		return  dashboardService.getPriceShockers();
 	}
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@GetMapping("/getVolumeShokers")
-	public List<StockDetails> getVolumeShokers() throws IOException {
+	public List<StockDetails> getVolumeShokers() {
 		return  dashboardService.getVolumeShokers();
 	}
 	
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@GetMapping("/getTopGainers")
-	public List<HistoricalQuote> getTopGainer() throws IOException {
+	public List<HistoricalQuote> getTopGainer(){
 		return  dashboardService.getTopGainer();
 	}
 	
